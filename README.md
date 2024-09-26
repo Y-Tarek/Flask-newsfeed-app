@@ -5,7 +5,7 @@ An API System for managing posts and their comments and likes.
 https://documenter.getpostman.com/view/28439113/2sAXqy1e7b
 
 ## ERD Diagram
-![](newsfeed.png)
+![](erd.png)
 
 
 ## Prerequisite
@@ -29,7 +29,7 @@ https://documenter.getpostman.com/view/28439113/2sAXqy1e7b
             - venv/scripts/activate     (Windows venv activation)
 
      3- Install Dependencies:
-           - pip install -r requirememnts.txt.
+           - pip install -r requirements.txt.
 
      4- Apply tables to your database:
         RUN:
