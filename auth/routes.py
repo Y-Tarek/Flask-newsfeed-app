@@ -38,7 +38,6 @@ def register():
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    data = request.get_json()
     schema = UserLoginSchema()
     try:
         validated_data = schema.load(data)
@@ -52,7 +51,6 @@ def login():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
     user = cursor.fetchone()
-    print(user)
     cursor.close()
     conn.close()
 
@@ -60,3 +58,5 @@ def login():
         access_token = create_access_token(identity=email)
         refresh_token = create_refresh_token(identity=email)
         return jsonify({"access_token": access_token, "refresh_token": refresh_token}), 200
+    else:
+        return jsonify({"error": "email or password is incorrect" }), 200

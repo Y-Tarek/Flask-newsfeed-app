@@ -9,4 +9,8 @@ class UserRegisterSchema(Schema):
 
 class UserLoginSchema(Schema):
     email = fields.Email(required=True)
-    password = fields.String(required=True, validate=validate.Length(min=6))
+    password = fields.String(required=True)
+
+class UserSchema(Schema):
+    id = fields.Integer()
+    username = fields.String()
