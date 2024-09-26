@@ -3,4 +3,4 @@ Flask
 pymysql
 mysql-connector-python
 Flask-JWT-Extended
-marshmallowow
+marshmallow
